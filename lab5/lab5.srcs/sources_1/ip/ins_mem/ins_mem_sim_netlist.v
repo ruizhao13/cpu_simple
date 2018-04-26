@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-// Date        : Thu Apr 26 00:52:22 2018
+// Date        : Thu Apr 26 22:01:09 2018
 // Host        : DESKTOP-RONFFCB running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem_sim_netlist.v
@@ -616,7 +616,7 @@ module ins_mem_spram
         .Q(qspo_int[9]),
         .R(1'b0));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000040)) 
     ram_reg_0_63_0_0
        (.A0(a[0]),
         .A1(a[1]),
@@ -642,7 +642,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000010)) 
     ram_reg_0_63_11_11
        (.A0(a[0]),
         .A1(a[1]),
@@ -681,7 +681,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000010)) 
     ram_reg_0_63_14_14
        (.A0(a[0]),
         .A1(a[1]),
@@ -707,7 +707,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000008)) 
+    .INIT(64'h0000000000000058)) 
     ram_reg_0_63_16_16
        (.A0(a[0]),
         .A1(a[1]),
@@ -720,7 +720,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000030)) 
     ram_reg_0_63_17_17
        (.A0(a[0]),
         .A1(a[1]),
@@ -733,7 +733,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000008)) 
+    .INIT(64'h0000000000000048)) 
     ram_reg_0_63_18_18
        (.A0(a[0]),
         .A1(a[1]),
@@ -746,7 +746,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000010)) 
     ram_reg_0_63_19_19
        (.A0(a[0]),
         .A1(a[1]),
@@ -785,7 +785,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000060)) 
     ram_reg_0_63_21_21
        (.A0(a[0]),
         .A1(a[1]),
@@ -798,7 +798,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000010)) 
     ram_reg_0_63_22_22
        (.A0(a[0]),
         .A1(a[1]),
@@ -824,7 +824,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000050)) 
     ram_reg_0_63_24_24
        (.A0(a[0]),
         .A1(a[1]),
@@ -850,7 +850,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000008)) 
+    .INIT(64'h0000000000000028)) 
     ram_reg_0_63_26_26
        (.A0(a[0]),
         .A1(a[1]),
@@ -863,7 +863,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000008)) 
+    .INIT(64'h0000000000000028)) 
     ram_reg_0_63_27_27
        (.A0(a[0]),
         .A1(a[1]),
@@ -889,7 +889,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000060)) 
     ram_reg_0_63_29_29
        (.A0(a[0]),
         .A1(a[1]),
@@ -928,7 +928,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000008)) 
+    .INIT(64'h0000000000000028)) 
     ram_reg_0_63_31_31
        (.A0(a[0]),
         .A1(a[1]),
@@ -967,7 +967,7 @@ module ins_mem_spram
         .WCLK(clk),
         .WE(we));
   RAM64X1S #(
-    .INIT(64'h0000000000000000)) 
+    .INIT(64'h0000000000000010)) 
     ram_reg_0_63_5_5
        (.A0(a[0]),
         .A1(a[1]),

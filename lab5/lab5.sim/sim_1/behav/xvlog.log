@@ -6,6 +6,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study/COD/lab/lab5/lab5/lab5.src
 INFO: [VRFC 10-311] analyzing module data_mem
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/control.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module control
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/control.v:35]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/REG_FILE.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module REG_FILE
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/alu.v" into library xil_defaultlib

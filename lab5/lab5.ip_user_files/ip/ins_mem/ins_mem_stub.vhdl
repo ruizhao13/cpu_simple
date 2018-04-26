@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
--- Date        : Thu Apr 26 00:52:22 2018
+-- Date        : Thu Apr 26 22:01:09 2018
 -- Host        : DESKTOP-RONFFCB running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem_stub.vhdl

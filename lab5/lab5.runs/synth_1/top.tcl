@@ -17,10 +17,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 add_files D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/data_ip.coe
 add_files D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_ip.coe
-add_files -quiet D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/data_mem/data_mem.dcp
-set_property used_in_implementation false [get_files D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/data_mem/data_mem.dcp]
-add_files -quiet D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem.dcp
-set_property used_in_implementation false [get_files D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem.dcp]
+add_files -quiet d:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/data_mem/data_mem.dcp
+set_property used_in_implementation false [get_files d:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/data_mem/data_mem.dcp]
+add_files -quiet d:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem.dcp
+set_property used_in_implementation false [get_files d:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/ip/ins_mem/ins_mem.dcp]
 read_verilog -library xil_defaultlib {
   D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/control.v
   D:/study/COD/lab/lab5/lab5/lab5.srcs/sources_1/new/REG_FILE.v

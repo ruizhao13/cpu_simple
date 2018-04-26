@@ -26,11 +26,12 @@ module top(
     );
     reg [31:0] PC;
     wire [31:0] next_PC;
+    wire [31:0] PC_branch;
     wire [31:0]instr;
     /* wire for control */
     /* output from control */
     wire MemtoReg, MemWrite, Branch, ALUSrc, RegDst, RegWrite;
-    wire [4:0] ALUControl;
+    wire [5:0] ALUControl;
     /* input to control */
     wire [31:26] Op;
     wire [5:0] Funct;
@@ -40,17 +41,17 @@ module top(
     /* input to REG_FILE */
     wire [31:0]read_data1;
     wire [31:0]read_data2;
-    wire [31:0]write_reg_addr;
+    wire [4:0]write_reg_addr;
     wire [31:0]write_reg_data;
     
     /* input to data_mem */
     wire [7:0] mem_addr;
-    wire [31:0] mem_write_data;
+    
     wire [31:0]alu_b;
     wire [31:0]mem_read_data;
     assign sig_imm = (instr[15])? (16'b1111_1111_1111_1111+ instr[15:0]) : (16'b0000_0000_0000_0000+ instr[15:0]);
     assign next_PC = PC + 1;
-
+    assign PC_branch = next_PC + sig_imm;
     ins_mem u_ins_mem (
       .a(PC[5:0]),      // input wire [5 : 0] a
       //.d(d),      // input wire [31 : 0] d
@@ -61,7 +62,7 @@ module top(
 
     data_mem u_data_mem (
       .a(ALU_result),        // input wire [7 : 0] a
-      .d(mem_write_data),        // input wire [31 : 0] d
+      .d(read_data2),        // input wire [31 : 0] d
       .dpra(ALU_result),  // input wire [7 : 0] dpra
       .clk(clk),    // input wire clk
       .we(MemWrite),      // input wire we
@@ -76,7 +77,8 @@ module top(
         PC <= 32'd0;
 
       end else begin
-        PC <= next_PC;
+        PC <= (Branch) ? PC_branch : next_PC;
+                
       end
     end
 
@@ -86,8 +88,8 @@ module top(
     REG_FILE u_REG_FILE(
       .clk(clk),
       .rst_n(rst_n),
-      .rAddr1(1'b0 + instr[25:21]),//[5:0]
-      .rAddr2(1'b0 + instr[20:16]),//[5:0]      
+      .rAddr1(instr[25:21]),//[5:0]
+      .rAddr2(instr[20:16]),//[5:0]      
       .rDout1(read_data1),//[31:0]
       .rDout2(read_data2),//[31:0]      
       .wAddr(write_reg_addr),//[5:0]
@@ -99,7 +101,7 @@ module top(
     ALU u_ALU(
       .alu_a(read_data1),
       .alu_b(alu_b),
-      .alu_op(6'b000001),
+      .alu_op(ALUControl),
       .alu_out(ALU_result)
     );
 

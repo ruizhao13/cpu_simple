@@ -11,11 +11,11 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="80280000fs"></ZoomStartTime>
-      <ZoomEndTime time="177480415fs"></ZoomEndTime>
-      <Cursor1Time time="175677000fs"></Cursor1Time>
+      <ZoomStartTime time="153140000fs"></ZoomStartTime>
+      <ZoomEndTime time="330940001fs"></ZoomEndTime>
+      <Cursor1Time time="219740000fs"></Cursor1Time>
    </zoom_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="25" />
    <wvobject fp_name="/test/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -33,25 +33,45 @@
       <obj_property name="ObjectShortName">instr[31:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/test/test/u_data_mem/inst/ram_data[1]" type="array">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/test/test/u_REG_FILE/regfile" type="array">
-      <obj_property name="ElementShortName">regfile[0:63][31:0]</obj_property>
-      <obj_property name="ObjectShortName">regfile[0:63][31:0]</obj_property>
+      <obj_property name="ElementShortName">regfile[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regfile[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_data_mem/inst/ram_data" type="array">
+      <obj_property name="ElementShortName">ram_data[255:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_data[255:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_data_mem/inst/ram_data[9]" type="array">
+      <obj_property name="ElementShortName">[9][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_data_mem/inst/ram_data[5]" type="array">
+      <obj_property name="ElementShortName">[5][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[5][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test/test/u_ALU/alu_a" type="array">
       <obj_property name="ElementShortName">alu_a[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_a[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test/test/u_ALU/alu_b" type="array">
       <obj_property name="ElementShortName">alu_b[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_b[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test/test/u_ALU/alu_op" type="array">
       <obj_property name="ElementShortName">alu_op[5:0]</obj_property>
       <obj_property name="ObjectShortName">alu_op[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test/test/u_ALU/alu_out" type="array">
       <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test/test/ALUSrc" type="logic">
       <obj_property name="ElementShortName">ALUSrc</obj_property>
@@ -80,5 +100,26 @@
    <wvobject fp_name="/test/test/mem_read_data" type="array">
       <obj_property name="ElementShortName">mem_read_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">mem_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_control/Op" type="array">
+      <obj_property name="ElementShortName">Op[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Op[5:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_control/Funct" type="array">
+      <obj_property name="ElementShortName">Funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Funct[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_control/RegWrite" type="logic">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_control/ALUControl" type="array">
+      <obj_property name="ElementShortName">ALUControl[5:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUControl[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/test/u_control/MemWrite" type="logic">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
    </wvobject>
 </wave_config>

@@ -23,15 +23,15 @@
 module REG_FILE(
     input clk,
     input rst_n,
-    input [5:0] rAddr1,
-    input [5:0] rAddr2,
+    input [4:0] rAddr1,
+    input [4:0] rAddr2,
     output [31:0] rDout1,    
     output [31:0] rDout2,
-    input [5:0] wAddr,
+    input [4:0] wAddr,
     input [31:0] wDin,
     input  wEna
     );
-    reg [31:0] regfile[0:63];
+    reg [31:0] regfile[0:31];
     
     assign rDout1 = regfile[rAddr1];
     assign rDout2 = regfile[rAddr2];
@@ -42,8 +42,8 @@ module REG_FILE(
       if ( ~rst_n ) begin
         regfile[0] <= 1;
         regfile[1] <= 1;
-        for (i = 2; i < 64; i = i + 1 ) begin
-          regfile[i] <= 0;
+        for (i = 2; i < 32; i = i + 1 ) begin
+          regfile[i] <= 1;
         end
       end else begin
         if (wEna) begin

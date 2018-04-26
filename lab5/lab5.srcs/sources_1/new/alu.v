@@ -27,7 +27,8 @@ module ALU(
   output   reg      [31:0]	alu_out
 );
 parameter	A_NOP	= 5'h00;	 	
-parameter	A_ADD	= 5'h01;	
+//parameter	A_ADD	= 5'h01;
+parameter   A_ADD = 6'b100000;	
 parameter	A_SUB	= 5'h02;	
 parameter	A_AND 	= 5'h03;
 parameter	A_OR  	= 5'h04;
